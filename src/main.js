@@ -6,7 +6,8 @@ import 'vant/lib/index.css'
 import '@vant/touch-emulator'
 import 'babel-polyfill';
 import 'lib-flexible';
-import VueWechatTitle from 'vue-wechat-title'
+import VueWechatTitle from 'vue-wechat-title';
+import store from './store/store'
 Vue.use(VueWechatTitle)
 // import Vconsole from 'vconsole'
 // let vConsole = new Vconsole();
@@ -15,5 +16,6 @@ Vue.use(Vant);
 Vue.config.productionTip = false;
 new Vue({
   router,
+	store,
   render: h => h(App),
 }).$mount('#app')

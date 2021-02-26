@@ -17,7 +17,7 @@ export default {
         type: String,
         default: "",
     },
-    activeColor:{
+    activeColor: {
         type: String,
         default: "red",
     }

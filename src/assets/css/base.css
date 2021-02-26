@@ -1,50 +1,19 @@
-html,
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-legend,
-input,
-button,
-textarea,
-p,
-blockquote,
-th,
-td {
+@import "./normalize.css";
+*,
+::before,
+::after {
 	margin: 0;
 	padding: 0;
-	font-style: normal;
+	box-sizing: border-box;
 }
-
 html,
 body {
 	height: 100%;
-	font-size: 15px;
-	color: #333333;
-	background: #f3f3f3;
-	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "SimSun";
+	color: #666666;
+	background: #fff;
 	letter-spacing: 1px;
-	overflow-x: hidden;
+	line-height: 1.5;
 }
-
-p {
-	word-break: break-all;
-}
-
 a,
 img {
 	width: 100%;
@@ -75,7 +44,7 @@ input:-ms-input-placeholder {
 }
 
 .line-height-formal {
-	line-height: 1.7;
+	line-height: 1.5;
 }
 
 .app-overflow-hidden {
@@ -155,7 +124,7 @@ input:-ms-input-placeholder {
 	display: inline-flex;
 }
 
-.flex1 {
+.flex_1 {
 	/* 单个元素铺满剩余空间 多个元素均分剩余空间  */
 	flex: 1;
 	min-width: 0;

@@ -1,11 +1,14 @@
-const path = require('path');
-function resolve(dir) {
-  return path.join(__dirname, dir)
-}
 module.exports = {
-    chainWebpack: (config)=>{
-        config.resolve.alias
-            .set('@', resolve('src'))
+    configureWebpack: {
+        resolve: {
+            alias: {
+                "assets": "@/assets",
+                "common": "@/common",
+                "components": "@/components",
+                "network": "@/network",
+                "views": "@/views"
+            }
+        }
     },
     css: {
         loaderOptions: {
@@ -21,12 +24,12 @@ module.exports = {
     },
     devServer: {
         proxy: {
-            '/vms': {
-                target: 'http://10.1.17.75',
+            '/api': {
+                target: 'http://api.reporthui.com',
                 changeOrigin: true, //跨域默认为true
                 secure: false, //https改为true
                 pathRewrite: {
-                    '^/vms': 'vms'
+                    '^/api': ''
                 },
 
             }

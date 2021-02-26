@@ -1,5 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+/**
+ * 重写路由的push方法 防止重复点击路由报错
+ */
+const routerPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
 Vue.use(Router)
 //配置路由
 export default new Router({
@@ -8,7 +15,7 @@ export default new Router({
 		{
 			path: '/home',
 			name: 'home',
-			component: resolve=>(require(["@/pages/home"],resolve)),
+			component: resolve=>(require(["@/views/home"],resolve)),
 			meta: {
 				title: '首页',
 			}
@@ -16,7 +23,7 @@ export default new Router({
 		{
 			path: '/category',
 			name: 'category',
-			component: resolve=>(require(["@/pages/category"],resolve)),
+			component: resolve=>(require(["@/views/category"],resolve)),
 			meta: {
 				title: '分类',
 			}
@@ -24,7 +31,7 @@ export default new Router({
 		{
 			path: '/cart',
 			name: 'cart',
-			component: resolve=>(require(["@/pages/cart"],resolve)),
+			component: resolve=>(require(["@/views/cart"],resolve)),
 			meta: {
 				title: '购物车',
 			}
@@ -32,7 +39,7 @@ export default new Router({
 		{
 			path: '/profile',
 			name: 'profile',
-			component: resolve=>(require(["@/pages/profile"],resolve)),
+			component: resolve=>(require(["@/views/profile"],resolve)),
 			meta: {
 				title: '我的',
 			}

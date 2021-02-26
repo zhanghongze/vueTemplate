@@ -14,5 +14,5 @@ function getParamsByUrl() {
   const util = {
     paramsFromUrl: getParamsByUrl(),
   }
-  
+
   export default util

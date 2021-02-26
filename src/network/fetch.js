@@ -3,7 +3,7 @@ import {
 	Toast
 } from "vant";
 const service = axios.create({
-	baseURL: '/vms',
+	baseURL: 'http://api.xxxxxx.com/api',
 	timeout: 5000
 })
 //请求

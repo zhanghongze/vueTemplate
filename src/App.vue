@@ -1,49 +1,28 @@
 <template>
   <div id="app" v-cloak>
     <router-view />
-    <tabbar>
-      <tabbaritem path="/home" :activeColor="activeColor">
-        <img slot="icon-item" src="./assets/images/home.png" />
-        <img slot="icon-item-active" src="./assets/images/home-active.png" />
-        <div slot="text-item">首页</div>
-      </tabbaritem>
-      <tabbaritem path="/category" :activeColor="activeColor">
-        <img slot="icon-item" src="./assets/images/category.png" />
-        <img slot="icon-item-active" src="./assets/images/category-active.png" />
-        <div slot="text-item">分类</div>
-      </tabbaritem>
-      <tabbaritem path="/cart" :activeColor="activeColor">
-        <img slot="icon-item" src="./assets/images/car.png" />
-        <img slot="icon-item-active" src="./assets/images/car-active.png" />
-        <div slot="text-item">购物车</div>
-      </tabbaritem>
-      <tabbaritem path="/profile" :activeColor="activeColor">
-        <img slot="icon-item" src="./assets/images/user.png" />
-        <img slot="icon-item-active" src="./assets/images/user-active.png" />
-        <div slot="text-item">我的</div>
-      </tabbaritem>
-    </tabbar>
+		<main-tab-bar />
   </div>
 </template>
 <script>
-import tabbar from "./components/tabbar/Tabbar";
-import tabbaritem from "./components/tabbar/Tabbaritem";
-// import "@/assets/css/cover.css"
+import MainTabBar from "components/content/maintabbar/MainTabBar";
 export default {
-  components: {
-    tabbar,
-    tabbaritem,
+	components: {
+    MainTabBar
   },
   name: "App",
   data() {
     return {
-      activeColor: "deeppink",
+
     };
   },
+	created(){
+
+	}
 };
 </script>
 <style>
-@import "./assets/css/cover.css";
+@import "assets/css/base.css";
 [v-cloak] {
   display: none;
 }
