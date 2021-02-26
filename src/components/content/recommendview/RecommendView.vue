@@ -27,7 +27,7 @@ export default {
 	display: flex;
 	text-align: center;
 	padding: 10px 0 15px;
-	/* border-bottom: 5px solid #eee; */
+	border-bottom: 5px solid #eee;
 }
 .recommend-view-item{
 	flex: 1;

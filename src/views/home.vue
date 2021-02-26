@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <nav-bar class="home-nav"><div slot="center">Demo</div></nav-bar>
+    <nav-bar class="home-nav"><div slot="center">购物街</div></nav-bar>
     <swiper
       class="home-swiper"
       :banners="banners"
@@ -9,7 +9,7 @@
       :autoplayColor="autoplayColor"
     ></swiper>
     <recommend-view :recommendList="recommendList" />
-    <!-- <feature-view :featureList="featureList" /> -->
+    <feature-view :featureList="featureList" />
     <tab-control :tabControls="tabControls" :tabControlColor="tabControlColor">
 				<goods-list :goodsList="goodsList"/>
 		</tab-control>
@@ -19,7 +19,7 @@
 import NavBar from "components/common/navbar/NavBar";
 import Swiper from "components/common/swiper/Swiper";
 import RecommendView from "components/content/recommendview/RecommendView";
-// import FeatureView from "components/content/featureview/FeatureView";
+import FeatureView from "components/content/featureview/FeatureView";
 import TabControl from "components/content/tabcontrol/TabControl";
 import GoodsList from 'components/content/goods/GoodsList';
 export default {
@@ -27,7 +27,7 @@ export default {
     NavBar,
     Swiper,
     RecommendView,
-    // FeatureView,
+    FeatureView,
     TabControl,
 		GoodsList
   },
@@ -60,40 +60,40 @@ export default {
           title: "合家团圆",
         },
       ],
-      // featureList: [
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐1",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐2",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐3",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐4",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐5",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐6",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐7",
-      //   },
-      //   {
-      //     image: require("assets/images/recommend2.png"),
-      //     title: "推荐8",
-      //   },
-      // ],
+      featureList: [
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐1",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐2",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐3",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐4",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐5",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐6",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐7",
+        },
+        {
+          image: require("assets/images/recommend2.png"),
+          title: "推荐8",
+        },
+      ],
       tabControls: [
         {
           title: "综合",
