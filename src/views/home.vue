@@ -159,6 +159,41 @@ export default {
 					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
 					title:"网红爱心图案T恤",
 					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
+				},
+				{
+					image:"https://s5.mogucdn.com/mlcdn/c45406/190320_198f9c710h5k6hg2128dk39aceef1_777x1332.jpg_440x587.v1cAC.40.webp",
+					title:"网红爱心图案T恤",
+					price:"￥79"
 				}
 			]
     };
@@ -198,6 +233,12 @@ export default {
   },
   created() {
     // this.init();
+		if(this.goodsList.length>0 && this.goodsList.length%2 != 0){
+			this.goodsList.push({
+				image:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3738246599,3514550209&fm=26&gp=0.jpg",
+				title:"预备上新"
+			})
+		}
   },
 };
 </script>
