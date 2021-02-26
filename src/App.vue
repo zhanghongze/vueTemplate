@@ -1,24 +1,20 @@
 <template>
   <div id="app" v-cloak>
     <router-view />
-		<main-tab-bar />
+    <main-tab-bar />
   </div>
 </template>
 <script>
 import MainTabBar from "components/content/maintabbar/MainTabBar";
 export default {
-	components: {
-    MainTabBar
+  components: {
+    MainTabBar,
   },
   name: "App",
   data() {
-    return {
-
-    };
+    return {};
   },
-	created(){
-
-	}
+  created() {},
 };
 </script>
 <style>
